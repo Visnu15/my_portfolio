@@ -1,3 +1,9 @@
+// Toggle the navigation menu visibility when hamburger is clicked
+document.getElementById("hamburger").addEventListener("click", function() {
+    const navMenu = document.getElementById("navMenu");
+    navMenu.style.display = navMenu.style.display === "block" ? "none" : "block";
+});
+
 // Toggle the display of the contact details and form when the Contact Me button is clicked
 document.getElementById("showContactFormBtn").addEventListener("click", function() {
     const contactDetails = document.getElementById("contactDetails");
