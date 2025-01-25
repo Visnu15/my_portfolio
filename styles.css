@@ -1,3 +1,4 @@
+/* Base Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -34,17 +35,18 @@ h2 {
     text-align: center;
 }
 
-.about p {
-    font-size: 18px;
-    color: #666;
-}
-
 .profile {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    background: linear-gradient(135deg, #f1f1f1 0%, #e2e2e2 100%);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
+    width: 80%;
+    max-width: 1100px;
+    align-items: center;
 }
 
 .profile-image {
@@ -52,20 +54,28 @@ h2 {
     height: 120px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #e74c3c;
+    border: 5px solid #e74c3c;
+    transition: transform 0.3s ease;
+    margin-right: 20px;
 }
 
-.about ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 10px 0;
+.profile-image:hover {
+    transform: scale(1.1);
 }
 
-.about ul li {
-    font-size: 16px;
-    margin-bottom: 5px;
+.profile-info {
+    flex: 1;
+    max-width: 700px;
+    padding: 20px;
 }
 
+.profile-info p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Services Section */
 .services .service-box {
     display: flex;
     justify-content: space-around;
@@ -97,4 +107,74 @@ footer {
     background-color: #2c3e50;
     color: white;
     padding: 10px 0;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    /* For smaller screens like tablets */
+    header nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav a {
+        margin: 10px 0;
+    }
+
+    .profile {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .profile-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .profile-info {
+        max-width: 90%;
+    }
+
+    .services .service-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services .service-box div {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* For mobile screens */
+    h2 {
+        font-size: 20px;
+    }
+
+    .profile-info p {
+        font-size: 16px;
+    }
+
+    .services .service-box div {
+        width: 100%;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
 }
