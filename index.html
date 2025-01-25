@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced Design Website</title>
+    <title>Visnu S Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,29 +13,57 @@
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
+        <a href="#contact" id="contactLink">Contact</a>
     </nav>
 </header>
 
 <section id="about" class="about">
-    <h2>About Us</h2>
-    <p>We are a modern design agency focused on providing top-notch web solutions with a focus on user experience and cutting-edge technologies.</p>
+    <h2>Meet Visnu S: A Passionate Test Automation Engineer</h2>
+    <div class="profile">
+        <img src="Prof pic.jpg" alt="Visnu S" class="profile-image">
+        <div>
+            <p><strong>Visnu S</strong> | Test Automation Engineer @ HCLTech | Automation and Manual Testing | SDET</p>
+            <p>Hi, I'm Visnu! I'm a passionate Software Engineer with a specialization in both <strong>manual</strong> and <strong>automation testing</strong>. With a strong background in QA and test automation, I thrive on delivering high-quality, bug-free software through innovative testing strategies. I believe in continuous learning and am always looking for new ways to improve my skills and contribute to meaningful projects.</p>
+            <p>Here's a little about what I bring to the table:</p>
+            <ul>
+                <li><strong>Technical Expertise:</strong> Proficient in <strong>Java</strong>, <strong>Selenium</strong>, <strong>TestNG</strong>, and <strong>Cucumber</strong>.</li>
+                <li><strong>Passion for Quality:</strong> Focused on delivering reliable and bug-free software.</li>
+                <li><strong>Innovation:</strong> Always exploring new technologies to improve testing processes and workflows.</li>
+            </ul>
+            <p>Let’s connect and work together to build better, more reliable software solutions!</p>
+        </div>
+    </div>
 </section>
 
 <section id="services" class="services">
-    <h2>Our Services</h2>
-    <p>We provide a wide range of services that help businesses thrive in the digital world.</p>
+    <h2>My Journey and Expertise</h2>
+    <p>A glimpse into my journey, showcasing the skills I've honed and the experiences that shape my approach to impactful solutions.</p>
     <div class="service-box">
         <div>
-            <h3>Web Design</h3>
-            <p>Creating beautiful, responsive, and user-friendly websites tailored to your needs.</p>
+            <h3>Work Experience</h3>
+            <p>Amazon Development Centre</p>
+            <ul>
+            <li>Worked on <strong>Prime Video</strong>, handling both <strong>manual</strong> and <strong>automation QA</strong> tasks.</li>
+            <li><strong>Automation:</strong>
+                <ul>
+                    <li>Automated test cases using <strong>Selenium</strong> and <strong>Java</strong>.</li>
+                    <li>Worked with <strong>TestNG</strong> and <strong>Cucumber frameworks</strong>, generating <strong>Extent Reports</strong>.</li>
+                </ul>
+            </li>
+            <li><strong>Testing Expertise:</strong>
+                <ul>
+                    <li>Performed <strong>sanity</strong> and <strong>regression testing</strong> for feature enhancements.</li>
+                    <li>Conducted <strong>cross-browser testing</strong> to validate application efficiency.</li>
+                </ul>
+            </li>
+            </ul>        
         </div>
         <div>
-            <h3>Web Development</h3>
+            <h3>Skills</h3>
             <p>Building robust and scalable web applications using the latest technologies.</p>
         </div>
         <div>
-            <h3>SEO Optimization</h3>
+            <h3>Education & Courses</h3>
             <p>Improving your website’s visibility on search engines to increase traffic.</p>
         </div>
     </div>
@@ -56,11 +84,17 @@
 
 <section id="contact" class="contact">
     <h2>Contact Us</h2>
-    <div class="contact-form">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" rows="5" required></textarea>
-        <button onclick="submitForm()">Submit</button>
+    <button id="showContactFormBtn">Contact Me</button>
+    <div id="contactDetails" style="display: none;">
+        <p>Phone: <strong>+123 456 7890</strong></p>
+        <p>Email: <strong>psvis@gmail.com</strong></p>
+        
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send</button>
+        </form>
     </div>
 </section>
 
